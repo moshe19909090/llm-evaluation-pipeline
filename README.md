@@ -1,5 +1,7 @@
 # LLM Evaluation Pipeline for E-commerce Product Descriptions
 
+> End-to-end LLM evaluation pipeline with human and automated judging for real-world e-commerce use case.
+
 This project implements an end-to-end evaluation pipeline for LLM-generated product descriptions, including rubric design, baseline generation, manual evaluation, iterative improvement, and automated judging using an LLM.
 
 ---
@@ -14,6 +16,15 @@ The dataset contains e-commerce products with structured information:
 - Warranty
 
 The goal is to generate a **persuasive 50–90 word product description** that is accurate, grounded, and aligned with a sales tone.
+
+---
+
+## Key Results
+
+- Built a full LLM evaluation pipeline from generation to automated judging
+- Achieved high agreement between human evaluation and LLM judge on objective criteria (fluency, grammar)
+- Identified grounding as the most challenging and critical failure point
+- Demonstrated that prompt engineering can outperform larger models in cost-performance tradeoff
 
 ---
 
@@ -70,6 +81,22 @@ The final score is computed using:
     │   └── assignment_01_single_criterion_judge.xlsx
     ├── requirements.txt
     └── README.md
+
+---
+
+## Quick Start
+
+```bash
+git clone https://github.com/moshe19909090/llm-evaluation-pipeline.git
+cd llm-evaluation-pipeline
+
+python3 -m venv .venv
+source .venv/bin/activate
+
+pip install -r requirements.txt
+cp .env.sample .env
+```
+Then open the notebooks and run in order.
 
 ---
 
@@ -153,6 +180,14 @@ LLM judge tends to be more lenient in borderline cases.
 ### Bigger models are not always better
 
 Higher cost and latency did not significantly improve quality over smaller models with better prompting.
+
+---
+
+## Limitations
+
+- Judge model struggles with nuanced tone evaluation
+- Grounding detection remains imperfect without external verification
+- Small models limit generation quality in edge cases
 
 ---
 
