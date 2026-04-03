@@ -2,6 +2,12 @@
 
 > End-to-end LLM evaluation pipeline with human and automated judging for real-world e-commerce use case.
 
+![Python](https://img.shields.io/badge/python-3.9+-blue)
+![Status](https://img.shields.io/badge/status-completed-brightgreen)
+![Project](https://img.shields.io/badge/project-LLM%20Evaluation-purple)
+![License](https://img.shields.io/badge/license-MIT-lightgrey)
+![Made With](https://img.shields.io/badge/made%20with-LLMs-orange)
+
 This project implements an end-to-end evaluation pipeline for LLM-generated product descriptions, including rubric design, baseline generation, manual evaluation, iterative improvement, and automated judging using an LLM.
 
 ---
